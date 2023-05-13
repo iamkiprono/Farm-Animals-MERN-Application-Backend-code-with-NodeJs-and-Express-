@@ -26,9 +26,9 @@ const getCow = async (req, res) => {
 
 // add cow
 const addCow = async (req, res) => {
-  const { name, dob } = req.body;
+  const { name, breed, dob } = req.body;
   try {
-    const cow = await Cow.create({ name, dob });
+    const cow = await Cow.create({ name, breed,dob });
     res.send(cow);
   } catch (error) {
     res.status(400).json({ error: error.message });

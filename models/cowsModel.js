@@ -4,11 +4,15 @@ const cowSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "Please add a cow name"],
+      required: true,
+    },
+    breed: {
+      type: String,
+      required: true,
     },
     dob: {
       type: Date,
-      required: [true, "Cow's Date of Birth is required"],
+      required: true,
     },
   },
   { timestamps: true }
