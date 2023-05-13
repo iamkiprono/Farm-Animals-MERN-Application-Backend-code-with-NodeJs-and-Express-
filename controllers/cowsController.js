@@ -31,7 +31,6 @@ const addCow = async (req, res) => {
     const cow = await Cow.create({ name, dob });
     res.send(cow);
   } catch (error) {
-    console.log(error);
     res.status(400).json({ error: error.message });
   }
 };
