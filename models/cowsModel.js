@@ -6,13 +6,12 @@ const cowSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add a cow name"],
     },
-    age: {
-      type: Number,
-      required: [true, "Cow age is required"],
+    dob: {
+      type: Date,
+      required: [true, "Cow's Date of Birth is required"],
     },
   },
   { timestamps: true }
 );
 
-
-module.exports = mongoose.model('cow', cowSchema)
+module.exports = mongoose.model("cow", cowSchema);

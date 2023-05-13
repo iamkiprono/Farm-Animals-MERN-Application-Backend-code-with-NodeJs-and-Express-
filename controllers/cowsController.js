@@ -26,9 +26,9 @@ const getCow = async (req, res) => {
 
 // add cow
 const addCow = async (req, res) => {
-  const { name, age } = req.body;
+  const { name, dob } = req.body;
   try {
-    const cow = await Cow.create({ name, age });
+    const cow = await Cow.create({ name, dob });
     res.send(cow);
   } catch (error) {
     console.log(error);
